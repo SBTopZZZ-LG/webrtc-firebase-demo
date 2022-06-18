@@ -3,12 +3,10 @@ import './style.css';
 import firebase from 'firebase/app';
 import 'firebase/firestore';
 
-const firebaseConfig = {
-  // your config
-};
+import FirebaseCreds from "./firebase.creds.json";
 
 if (!firebase.apps.length) {
-  firebase.initializeApp(firebaseConfig);
+  firebase.initializeApp(FirebaseCreds.cred);
 }
 const firestore = firebase.firestore();
 
